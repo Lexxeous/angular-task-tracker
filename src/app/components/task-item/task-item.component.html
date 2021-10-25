@@ -1,0 +1,16 @@
+<!-- Render the div and left green border if <task.reminder> is true, else render plain-->
+
+<div *ngIf="task.reminder; then thenBlock else elseBlock"></div>
+	<ng-template #thenBlock>
+		<div class="task reminder">
+			<h3>{{ task.text }}</h3>
+			<p>{{ task.day }} at {{ task.time }}, {{ task.year }}</p>
+		</div>
+	</ng-template>
+
+	<ng-template #elseBlock>
+		<div class="task">
+			<h3>{{ task.text }}</h3>
+			<p>{{ task.day }} at {{ task.time }}, {{ task.year }}</p>
+		</div>
+	</ng-template>
