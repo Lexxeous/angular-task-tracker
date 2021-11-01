@@ -16,7 +16,7 @@
       "month": "May",
       "day": "6th",
       "year": 2021,
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "month": "May",
       "day": "7th",
       "year": 2021,
-      "reminder": false
+      "reminder": true
     }
   ]
 }

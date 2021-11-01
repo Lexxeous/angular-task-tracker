@@ -20,6 +20,7 @@ export class TaskItemComponent implements OnInit {
   };
 
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
 
   // Initialize Font Awesome resource variables
   faTimes = faTimes;
@@ -34,5 +35,9 @@ export class TaskItemComponent implements OnInit {
 
   onDelete(task: Task): void {
     this.onDeleteTask.emit(task);
+  }
+
+  onToggle(task: Task): void {
+    this.onToggleReminder.emit(task);
   }
 }

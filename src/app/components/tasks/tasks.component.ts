@@ -32,4 +32,11 @@ export class TasksComponent implements OnInit {
       () => (this.tasks = this.tasks.filter(t => t.id !== task.id)) // properly update UI
     );
   }
+
+  toggleReminder(task: Task): void {
+    task.reminder = !task.reminder; // invert the reminder property
+    this.taskService
+    .updateTaskReminder(task)
+    .subscribe();
+  }
 }

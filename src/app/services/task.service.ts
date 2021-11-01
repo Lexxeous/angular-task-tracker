@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { Task } from '../Task'; // include the Task model/interface
+
+// Define HTTP headers to pass JSON data through with a request
+const httpOptions = {
+  headers: new HttpHeaders({
+    "Content-Type": "application/json"
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +35,12 @@ export class TaskService {
   }
 
   deleteTask(task: Task): Observable<Task> {
-    const url = `${this.apiUrl}/${task.id}`;
+    const url = `${this.apiUrl}/${task.id}`; // delete task with specific ID
     return this.http.delete<Task>(url);
+  }
+
+  updateTaskReminder(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`; // update task with a specific ID
+    return this.http.put<Task>(url, task, httpOptions); // (url: String, task: <json>body, httpOptions: HttpHeaders)
   }
 }
