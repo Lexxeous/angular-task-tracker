@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component'; // gener
 import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     HeaderComponent, // generated automatically with `ng generate component components/header`
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

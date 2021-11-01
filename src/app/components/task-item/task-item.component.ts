@@ -11,7 +11,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TaskItemComponent implements OnInit {
   // Initialize empty task
   @Input() task: Task = { // task-item component takes a Task object as input
-    text: "", // string
+    desc: "", // string
     time: "", // string
     month: "", //string
     day: "", // string
