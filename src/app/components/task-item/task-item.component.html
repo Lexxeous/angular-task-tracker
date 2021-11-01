@@ -4,13 +4,13 @@
 	<ng-template #thenBlock>
 		<div class="task reminder">
 			<h3>{{ task.text }}<fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon></h3>
-			<p>{{ task.day }} at {{ task.time }}, {{ task.year }}</p>
+			<p>{{task.month}} {{ task.day }}, {{ task.year }} at {{ task.time }}</p>
 		</div>
 	</ng-template>
 
 	<ng-template #elseBlock>
 		<div class="task">
 			<h3>{{ task.text }}</h3>
-			<p>{{ task.day }} at {{ task.time }}, {{ task.year }}</p>
+			<p>{{task.month}} {{ task.day }}, {{ task.year }} at {{ task.time }}</p>
 		</div>
 	</ng-template>

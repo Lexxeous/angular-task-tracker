@@ -3,8 +3,9 @@
 export interface Task { // interfaces are like classes or structs in Angular
   id?: number; // optional <id> property
   text: string;
-  day: string;
   time: string;
-  year: string;
+  month: string;
+  day: string;
+  year: number;
   reminder: boolean;
 }

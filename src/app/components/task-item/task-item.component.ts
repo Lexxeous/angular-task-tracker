@@ -14,9 +14,10 @@ export class TaskItemComponent implements OnInit {
   // Initialize empty task
   @Input() task: Task = { // task-item component takes a Task object as input
     text: "", // string
-    day: "", // string
     time: "", // string
-    year: "", // string
+    month: "", //string
+    day: "", // string
+    year: -1, // string
     reminder: true // boolean
   };
 

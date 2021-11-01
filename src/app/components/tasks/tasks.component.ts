@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TASKS } from '../../mock-tasks'; // include the static list of tasks
 import { Task } from '../../Task'; // include the Task model/interface
+import { TaskService } from '../../services/task.service'
 
 @Component({
   selector: 'app-tasks',
@@ -9,11 +9,20 @@ import { Task } from '../../Task'; // include the Task model/interface
 })
 
 export class TasksComponent implements OnInit {
-  tasks: Task[] = TASKS; // initialize a variable inside component equal to static list of tasks
+  tasks: Task[] = []; // initialize a variable inside component equal to static list of tasks
 
-  constructor() { }
+  constructor(private taskService: TaskService) { // set provider(s) for the services
+    // empty
+  }
+
+  // ngOnInit(): void {
+  //   this.tasks = this.taskService.getTasks(); // fine for static file, but use observables in prod for async data from server
+  // }
 
   ngOnInit(): void {
+    this.taskService.getTasksObsv().subscribe(
+      (obsvTasks) => this.tasks = obsvTasks
+    ); // use subscriptions similar to JS promises, going to be monitoring async data all the time now
   }
 
 }
