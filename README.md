@@ -1,5 +1,8 @@
 # <img src=".pics/lexx_headshot_clear.png" width="90px"/> Lexxeous's Angular Task Tracker: <img src=".pics/angular_logo.png" width="90px"/>
 
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Generic badge](https://img.shields.io/badge/working-yes-bright_green_.svg)](https://shields.io/)
 
