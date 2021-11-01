@@ -20,9 +20,16 @@ export class TasksComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-    this.taskService.getTasksObsv().subscribe(
-      (obsvTasks) => this.tasks = obsvTasks
+    this.taskService.getTasks().subscribe(
+      (ts) => this.tasks = ts
     ); // use subscriptions similar to JS promises, going to be monitoring async data all the time now
   }
 
+  deleteTask(task: Task): void {
+    this.taskService
+    .deleteTask(task) // call the API to actually delete task
+    .subscribe(
+      () => (this.tasks = this.tasks.filter(t => t.id !== task.id)) // properly update UI
+    );
+  }
 }

@@ -1,31 +1,31 @@
 {
-	"tasks": [
-		{
-			"id": 1,
-			"text": "Doctors Appointment",
-			"time": "2:30pm",
-			"month": "May",
-			"day": "5th",
-			"year": 2021,
-			"reminder": true
-		},
-		{
-			"id": 2,
-			"text": "Meeting at School",
-			"time": "1:30pm",
-			"month": "May",
-			"day": "6th",
-			"year": 2021,
-			"reminder": true
-		},
-		{
-			"id": 3,
-			"text": "Food Shopping",
-			"time": "12:30pm",
-			"month": "May",
-			"day": "7th",
-			"year": 2021,
-			"reminder": false
-		}
-	]
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Doctors Appointment",
+      "time": "2:30pm",
+      "month": "May",
+      "day": "5th",
+      "year": 2021,
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Meeting at School",
+      "time": "1:30pm",
+      "month": "May",
+      "day": "6th",
+      "year": 2021,
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Food Shopping",
+      "time": "12:30pm",
+      "month": "May",
+      "day": "7th",
+      "year": 2021,
+      "reminder": false
+    }
+  ]
 }

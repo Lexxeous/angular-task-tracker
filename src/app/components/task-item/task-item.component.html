@@ -3,14 +3,26 @@
 <div *ngIf="task.reminder; then thenBlock else elseBlock"></div>
 	<ng-template #thenBlock>
 		<div class="task reminder">
-			<h3>{{ task.text }}<fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon></h3>
+			<h3>{{ task.text }}
+				<fa-icon
+					(click)="onDelete(task)"
+					[icon]="faTimes"
+					[ngStyle]="{color: 'red'}">
+				</fa-icon>
+			</h3>
 			<p>{{task.month}} {{ task.day }}, {{ task.year }} at {{ task.time }}</p>
 		</div>
 	</ng-template>
 
 	<ng-template #elseBlock>
 		<div class="task">
-			<h3>{{ task.text }}</h3>
+			<h3>{{ task.text }}
+				<fa-icon
+					(click)="onDelete(task)"
+					[icon]="faTimes"
+					[ngStyle]="{color: 'red'}">
+				</fa-icon>
+			</h3>
 			<p>{{task.month}} {{ task.day }}, {{ task.year }} at {{ task.time }}</p>
 		</div>
 	</ng-template>

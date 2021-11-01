@@ -23,7 +23,12 @@ export class TaskService {
   //   return obsvTasks;
   // }
 
-  getTasksObsv(): Observable<Task[]> { // use an observable and HTTP requests with the json-server package
+  getTasks(): Observable<Task[]> { // use an observable and HTTP requests with the json-server package
     return this.http.get<Task[]>(this.apiUrl);
+  }
+
+  deleteTask(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.http.delete<Task>(url);
   }
 }

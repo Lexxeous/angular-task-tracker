@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../../Task'; // include task interface
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,8 +9,6 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class TaskItemComponent implements OnInit {
-  faTimes = faTimes;
-
   // Initialize empty task
   @Input() task: Task = { // task-item component takes a Task object as input
     text: "", // string
@@ -21,8 +19,20 @@ export class TaskItemComponent implements OnInit {
     reminder: true // boolean
   };
 
-  constructor() { }
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+
+  // Initialize Font Awesome resource variables
+  faTimes = faTimes;
+
+  constructor() {
+    // empty
+  }
 
   ngOnInit(): void {
+    // empty
+  }
+
+  onDelete(task: Task): void {
+    this.onDeleteTask.emit(task);
   }
 }
