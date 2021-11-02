@@ -25,23 +25,51 @@ export class AddTaskComponent implements OnInit {
 	onSubmit() {
 		// Make all field data required
 		if(!this.desc) {
-			alert("Please enter the task description.");
+			alert("Enter the task description.");
 			return;
 		}
 		if(!this.time) {
-			alert("Please enter the task time.");
+			alert("Enter the task time.");
 			return;
 		}
 		if(!this.month) {
-			alert("Please enter the task month.");
+			alert("Enter the task month.");
 			return;
 		}
 		if(!this.day) {
-			alert("Please enter the task day.");
+			alert("Enter the task day.");
 			return;
 		}
 		if(!this.year) {
-			alert("Please enter the task year.");
+			alert("Enter the task year.");
+			return;
+		}
+
+		const desc_regex = new RegExp('');
+		const desc_test: boolean = desc_regex.test(this.desc);
+		if(desc_test == false) {
+			alert("Enter a valid task description.");
+			return;
+		}
+
+		const time_regex = new RegExp('/^([0|1]?\d\:[012345]\d(am|AM|pm|PM))$/');
+		const time_test: boolean = time_regex.test(this.time);
+		if(time_test == false) {
+			alert("Enter a valid task time.");
+			return;
+		}
+
+		const month_regex = new RegExp('');
+		const month_test: boolean = month_regex.test(this.month);
+		if(month_test == false) {
+			alert("Enter a valid task month.");
+			return;
+		}
+
+		const day_regex = new RegExp('');
+		const day_test: boolean = day_regex.test(this.day);
+		if(day_test == false) {
+			alert("Enter a valid task day.");
 			return;
 		}
 
