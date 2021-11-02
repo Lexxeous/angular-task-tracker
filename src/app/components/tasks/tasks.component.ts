@@ -20,8 +20,10 @@ export class TasksComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-    this.taskService.getTasks().subscribe(
-      (ts) => this.tasks = ts
+    this.taskService
+    .getTasks()
+    .subscribe(
+      (ts) => (this.tasks = ts)
     ); // use subscriptions similar to JS promises, going to be monitoring async data all the time now
   }
 
@@ -38,5 +40,13 @@ export class TasksComponent implements OnInit {
     this.taskService
     .updateTaskReminder(task)
     .subscribe();
+  }
+
+  addTask(task: Task): void {
+    this.taskService
+    .addTask(task)
+    .subscribe(
+      (t) => (this.tasks.push(task))
+    )
   }
 }

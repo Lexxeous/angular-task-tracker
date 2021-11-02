@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // for awesome fonts
 
 // Declarations/Components
@@ -24,8 +25,9 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

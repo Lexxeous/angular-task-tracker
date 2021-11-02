@@ -43,4 +43,8 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`; // update task with a specific ID
     return this.http.put<Task>(url, task, httpOptions); // (url: String, task: <json>body, httpOptions: HttpHeaders)
   }
+
+  addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
+  }
 }

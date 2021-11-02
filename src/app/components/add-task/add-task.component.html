@@ -1,28 +1,30 @@
-<form class="add-form">
+<form class="add-form" (ngSubmit)="onSubmit()">
+
+	<h3>New Task:</h3>
 	<div class="form-control">
-		<label for="desc">New Task</label>
-		<input type="text" name="desc" id="add-task-desc" placeholder="Description">
+		<label for="desc"></label>
+		<input type="text" name="desc" id="add-task-desc" placeholder="Description*" [(ngModel)]="desc">
 	</div>
 
 	<div class="form-control">
-		<input type="text" name="time" id="add-task-time" placeholder="Time">
+		<input type="text" name="time" id="add-task-time" placeholder="Time*" [(ngModel)]="time">
 	</div>
 
 	<div class="form-control">
-		<input type="text" name="month" id="add-task-month" placeholder="Month">
+		<input type="text" name="month" id="add-task-month" placeholder="Month*" [(ngModel)]="month">
 	</div>
 
 	<div class="form-control">
-		<input type="text" name="day" id="add-task-day" placeholder="Day">
+		<input type="text" name="day" id="add-task-day" placeholder="Day*" [(ngModel)]="day">
 	</div>
 
 	<div class="form-control">
-		<input type="text" name="year" id="add-task-year" placeholder="Year">
+		<input type="text" name="year" id="add-task-year" placeholder="Year*" [(ngModel)]="year">
 	</div>
 
 	<div class="form-control form-control-check">
-		<label for="remind">Reminder</label>
-		<input type="checkbox" name="remind" id="add-task-remind" placeholder="Reminder">
+		<label for="reminder">Reminder</label>
+		<input type="checkbox" name="reminder" id="add-task-reminder" placeholder="Reminder" [(ngModel)]="reminder">
 	</div>
 
 	<input type="submit" value="Save Task" name="submit-task" class="btn btn-block">
