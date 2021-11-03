@@ -27,8 +27,8 @@ export class AddTaskComponent implements OnInit {
 
 	constructor(private uiService: UiService) { 
 		this.subscription = this.uiService
-    .onToggle()
-    .subscribe((val) => (this.showAddTask = val)); // boolean value for anything that toggles when adding a new task
+		.onToggle()
+		.subscribe((val) => (this.showAddTask = val)); // boolean value for anything that toggles when adding a new task
 	}
 
 	ngOnInit(): void {
@@ -36,8 +36,8 @@ export class AddTaskComponent implements OnInit {
 	}
 
 	toggleAddTask() {
-    this.uiService.toggleAddTask();
-  }
+		this.uiService.toggleAddTask();
+	}
 
 	onSubmit() {
 		// Make all field data required
