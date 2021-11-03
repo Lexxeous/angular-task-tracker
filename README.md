@@ -12,9 +12,13 @@ Credit goes to the [Angular Crash Course 2021](https://www.youtube.com/watch?v=3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
+### Local Backend JSON Database:
+
+This application uses a mock database with the **NPM** package: [`json-server`](https://www.npmjs.com/package/json-server). This allows the use of an REST API within the **Angular** application, to make HTTP requests. Run this *NoSQL* database server by using `npm run db`, then navigate to `http://localhost:5000/`.
+
 ### Development Server:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` (or `npm start`) for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Code Scaffolding:
 
